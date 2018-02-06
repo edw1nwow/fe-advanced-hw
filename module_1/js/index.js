@@ -1,12 +1,12 @@
-const a = 'qwertyuiop[]\\';
-const b = 'asdfghjkl\;\'';
-const c = 'zxcvbnm,.';
+const topLoverCase = 'qwertyuiop[]\\';
+const middleLowerCase = 'asdfghjkl\;\'';
+const bottomLowerCase = 'zxcvbnm,.';
 
-const d = a.length;
-const e = b.length;
-const f = c.length;
+const topLength = topLoverCase.length;
+const middleLength = middleLowerCase.length;
+const bottomLength = bottomLowerCase.length;
 
-const findOne = a.indexOf('[');
-const findTwo = a.indexOf(']');
+const findElementOne = topLoverCase.indexOf('[');
+const findElementTwo = topLoverCase.indexOf(']');
                                            
-console.log ('a = ' + a + ' ' + d + ' ' + a.charAt(0) + a.charAt(12) + ' '+ findOne + ' ' + findTwo +' b = ' + b + ' ' + e + ' ' + b.charAt(0) + b.charAt(10) + ' c = ' + c + ' ' + f + ' ' + c.charAt(0) + c.charAt(8));
+console.log (`topLoverCase = ${topLoverCase} ${topLength} ${topLoverCase.charAt(0)} ${topLoverCase.charAt(12)} ${findElementOne} ${findElementTwo} middleLowerCase = ${middleLowerCase} ${middleLength} ${middleLowerCase.charAt(0) } ${middleLowerCase.charAt(10)} bottomLowerCase = ${bottomLowerCase} ${bottomLength} ${bottomLowerCase.charAt(0)} ${bottomLowerCase.charAt(8)}`);
