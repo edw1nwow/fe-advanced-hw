@@ -10,19 +10,16 @@ if (parseInt(numberPeople) != numberPeople) {
 } else {
     alert('Вас: ' + numberPeople + ' человек');
 }
-
 if (numberPeople > 25) {
     alert('Мест нет!')
 } else if (numberPeople > 15) {
     check = confirm('Для вас есть вариант поехать в hurgada');
     if (check != true) {
         alert('Приходите позже =(');
-
     } else {
         tempPlaces = hurgada - numberPeople;
         alert('Спасибо за выбор! Осталось мест: ' + tempPlaces);
     }
-
 } else if (numberPeople > 5) {
     alert('Для вас есть два варианта sharm и hurgada')
     check = confirm('Первый вариант sharm')
@@ -34,7 +31,6 @@ if (numberPeople > 25) {
             tempPlaces = hurgada - numberPeople;
             alert('Спасибо за выбор! Осталось мест: ' + tempPlaces);
         }
-
     } else {
         tempPlaces = sharm - numberPeople;
         alert('Спасибо за выбор! Осталось мест: ' + tempPlaces);
