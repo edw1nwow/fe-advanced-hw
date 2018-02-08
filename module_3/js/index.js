@@ -1,8 +1,3 @@
-//const firstString = ['q','w','e','r','t', 'y','u','i', 'o','p','[',']','\\'];
-//const secondString = ['a','s','d','f','g','h','j','k','l',';','\''];
-//const thirdString = ['z','x','c','v','b','n','m',',','.','/'];
-//const keyboard = [firstString, secondString, thirdString];
-//let keyboard = [['qwertyuiop[]\\'],['asdfghjkl;\''],['zxcvbnm/']];
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 let keyboard;
 let firstWord;
