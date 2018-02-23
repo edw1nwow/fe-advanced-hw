@@ -48,11 +48,11 @@ const keyTrainer = {
         }
     },
     run: function () {
-        keyTrainer.setCharCount();
-        keyTrainer.createTask();
-        keyTrainer.startTask();
-        keyTrainer.userErrors();
-        const result = keyTrainer.userInput;
+        this.setCharCount();
+        this.createTask();
+        this.startTask();
+        this.userErrors();
+        const result = this.userInput;
         console.log('result', result)
     }
 }
