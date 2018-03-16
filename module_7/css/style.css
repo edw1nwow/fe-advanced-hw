@@ -1,29 +1,28 @@
-main{
+main {
     width: 1000px;
     margin: 0 auto;
-
 }
-.top{
+
+.top {
     display: flex;
     width: 100%;
     justify-content: center;
-    
 }
-.mid{
+
+.mid {
     margin: 0 auto;
     display: flex;
     justify-content: center;
     width: 100%;
-    
 }
-.bot{
+
+.bot {
     margin: 0 auto;
     display: flex;
     width: 100%;
     justify-content: center;
-    
-
 }
+
 .toprow {
     width: 10px;
     border: 2px solid black;
@@ -32,6 +31,7 @@ main{
     display: flex;
     justify-content: center;
 }
+
 .middlerow {
     width: 10px;
     border: 2px solid black;
@@ -40,8 +40,9 @@ main{
     display: flex;
     justify-content: center;
 }
-.bottomrow{
-   width: 10px;
+
+.bottomrow {
+    width: 10px;
     border: 2px solid black;
     padding: 5px;
     margin: 5px;
