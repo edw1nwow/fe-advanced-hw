@@ -52,14 +52,6 @@ const playSound = note => {
     audio.play();
 };
 
-function recall() {
-    if (checker.checked == true) {
-        playSound;
-        alert('on')
-    } else {
-        alert("Sound off")
-    }
-}
 
 const buttons = Array.from(document.querySelectorAll("button"));
 const temp = document.querySelector(".output")
@@ -74,12 +66,27 @@ function callback() {
                 if (i == 0) {
                     const findAllClass = document.querySelectorAll(".toprow");
                     findAllClass[j].className = "toprow button keyboard__btn--active";
+
+                    if (checker.checked == true) {
+                        let note = findAllClass[j].getAttribute('data-note');
+                        playSound(note);
+                    }
+
+
                 } else if (i == 1) {
                     const findAllClass = document.querySelectorAll(".middlerow");
                     findAllClass[j].className = "middlerow button keyboard__btn--active";
+                    if (checker.checked == true) {
+                        let note = findAllClass[j].getAttribute('data-note');
+                        playSound(note);
+                    }
                 } else {
                     const findAllClass = document.querySelectorAll(".bottomrow");
                     findAllClass[j].className = "bottomrow button keyboard__btn--active";
+                    if (checker.checked == true) {
+                        let note = findAllClass[j].getAttribute('data-note');
+                        playSound(note);
+                    }
                 }
             }
         }
@@ -94,4 +101,3 @@ function callOut() {
 
 window.addEventListener("keydown", callback);
 createLayout();
-checker.addEventListener("click", recall);
