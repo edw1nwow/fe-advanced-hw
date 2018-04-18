@@ -6,9 +6,9 @@ main {
 
 .top,
 .mid,
-.bot,
-    {
+.bot {
     display: flex;
+    margin: 0 auto;
     width: 100%;
     justify-content: center;
 }
