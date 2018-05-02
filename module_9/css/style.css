@@ -30,6 +30,21 @@
     color: #424242;
     cursor: default;
 }
+.menu-item{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.menu-item:last-child {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+.menu-item:last-child .button {
+    width: 400px;
+   justify-content: center;
+}
 
 .keyboard__btn--active {
     border: 1px solid transparent;
