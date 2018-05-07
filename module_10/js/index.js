@@ -9,6 +9,7 @@ const check = 'qryte';
 const base = 60;
 let clocktimer, dateObj, dh, dm, ds, ms;
 let readout = '';
+let data = '99:99:99:99';
 let h = 1,
     m = 1,
     tm = 1,
@@ -113,18 +114,20 @@ function StartStop() {
         clearTimeout(clocktimer);
         init = 5;
         console.log(readout);
-        let data = localStorage.getItem('bestResult');
+        //Если правильно введено и результат лучше перезаписываем localStorage
         if (findKeyboardClass.textContent == 'qryte') {
             alert('Good Job!')
             if (readout < data) {
-            localStorage.setItem('bestResult', readout);
-        }
+                localStorage.setItem('bestResult', readout);
+                data = localStorage.getItem('bestResult');
+            }
         } else {
             alert('You have a lot of errors. Try again...')
         }
+        
     }
 }
-
+    
 const bestResult = document.querySelector('.best-result')
 bestResult.textContent = localStorage.getItem('bestResult');
 
