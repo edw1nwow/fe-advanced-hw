@@ -114,11 +114,11 @@ function StartStop() {
         init = 5;
         console.log(readout);
         let data = localStorage.getItem('bestResult');
-        if (readout < data) {
-            localStorage.setItem('bestResult', readout);
-        }
         if (findKeyboardClass.textContent == 'qryte') {
             alert('Good Job!')
+            if (readout < data) {
+            localStorage.setItem('bestResult', readout);
+        }
         } else {
             alert('You have a lot of errors. Try again...')
         }
