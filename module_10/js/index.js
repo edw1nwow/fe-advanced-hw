@@ -16,10 +16,8 @@ let h = 1,
     ts = 0,
     init = 0
 
-ms = 0
-
 findExerciseClass.innerHTML = charsArr;
-
+ms = 0
 //функция для очистки поля
 function ClearСlock() {
     clearTimeout(clocktimer);
@@ -33,6 +31,7 @@ function ClearСlock() {
     readout = '00:00:00.00';
     document.MyForm.stopwatch.value = readout;
 }
+
 //функция для старта секундомера
 function StartTIME() {
     let cdateObj = new Date();
@@ -96,6 +95,7 @@ function StartTIME() {
     document.MyForm.stopwatch.value = readout;
     clocktimer = setTimeout("StartTIME()", 1);
 }
+
 //Функция запуска и остановки
 function StartStop() {
     if (init == 0) {
@@ -117,11 +117,11 @@ function StartStop() {
         if (readout < data) {
             localStorage.setItem('bestResult', readout);
         }
-         if (findKeyboardClass.textContent == 'qryte') {
-                alert('Good Job!')
-            } else {
-                alert('You have a lot of errors. Try again...')
-            }
+        if (findKeyboardClass.textContent == 'qryte') {
+            alert('Good Job!')
+        } else {
+            alert('You have a lot of errors. Try again...')
+        }
     }
 }
 
@@ -135,13 +135,7 @@ function callback() {
             findKeyboardClass.innerHTML += inputFromWindow;
         }
     }
-
-
 }
-
-
-
-
 
 window.addEventListener('keydown', callback)
 window.addEventListener('keydown', StartStop)
