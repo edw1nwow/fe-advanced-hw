@@ -10,6 +10,7 @@ const base = 60;
 let clocktimer, dateObj, dh, dm, ds, ms;
 let readout = '';
 let data = '99:99:99:99';
+const reset = document.querySelector(".reset");
 let h = 1,
     m = 1,
     tm = 1,
@@ -116,10 +117,19 @@ function StartStop() {
         console.log(readout);
         //Если правильно введено и результат лучше перезаписываем localStorage
         if (findKeyboardClass.textContent == 'qryte') {
-            alert('Good Job!')
-            if (readout < data) {
+           // alert('Good Job! Your time ='+ ' ' + readout)
+            
+            if (localStorage.getItem('bestResult') == null){
+                localStorage.setItem('bestResult', data);
+            }
+            
+//            localStorage.setItem('bestResult', readout);
+            if (readout < localStorage.getItem('bestResult')) {
+                alert('Good Job! Your time ='+ ' ' + readout)
                 localStorage.setItem('bestResult', readout);
                 data = localStorage.getItem('bestResult');
+            } else {
+                alert('Your time worth than previous ' + readout)
             }
         } else {
             alert('You have a lot of errors. Try again...')
@@ -127,7 +137,17 @@ function StartStop() {
         
     }
 }
+function resetClock() {
+    ClearСlock();
+    dateObj = new Date();
+        StartTIME();
+        init = 1;
+}
     
+
+
+
+
 const bestResult = document.querySelector('.best-result')
 bestResult.textContent = localStorage.getItem('bestResult');
 
@@ -136,9 +156,13 @@ function callback() {
     for (let i = 0; i < createArr.length; i++) {
         if (inputFromWindow == createArr[i]) {
             findKeyboardClass.innerHTML += inputFromWindow;
+            console.log(createArr[i] + " " + readout);
         }
     }
 }
 
+
+
 window.addEventListener('keydown', callback)
 window.addEventListener('keydown', StartStop)
+reset.addEventListener('click', resetClock)
